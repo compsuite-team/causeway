@@ -27,6 +27,7 @@ import org.apache.causeway.commons.internal.os._OsUtil;
 import org.apache.causeway.core.config.presets.CausewayPresets;
 import org.apache.causeway.security.bypass.CausewayModuleSecurityBypass;
 import org.apache.causeway.viewer.thymeflux.test.config.ThymefluxConfig_headlessPersistence;
+import org.apache.causeway.viewer.thymeflux.test.config.ThymefluxConfig_usingThymeleaf;
 import org.apache.causeway.viewer.thymeflux.test.features.ThymefluxFeaturesController;
 import org.apache.causeway.viewer.thymeflux.viewer.CausewayModuleIncViewerThymefluxViewer;
 
@@ -37,12 +38,15 @@ import org.apache.causeway.viewer.thymeflux.viewer.CausewayModuleIncViewerThymef
 @Import({
     CausewayModuleSecurityBypass.class,
     ThymefluxConfig_headlessPersistence.class,
+    //ThymefluxConfig_customViewResolution.class,
+    ThymefluxConfig_usingThymeleaf.class,
 
     // THYMEFLUX INTEGRATION
     CausewayModuleIncViewerThymefluxViewer.class,
     // FEATURES
     ThymefluxFeaturesController.class
 })
+//@EnableAutoConfiguration(exclude = WebMvcAutoConfiguration.class)
 public class ThymefluxFeaturesApp extends SpringBootServletInitializer {
 
     /**

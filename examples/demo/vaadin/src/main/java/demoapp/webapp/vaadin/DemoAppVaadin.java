@@ -37,7 +37,6 @@ import org.apache.causeway.valuetypes.markdown.metamodel.CausewayModuleValMarkdo
 import org.apache.causeway.valuetypes.markdown.persistence.jdo.dn.CausewayModuleValMarkdownPersistenceJdoDn;
 import org.apache.causeway.valuetypes.vega.metamodel.CausewayModuleValVegaMetaModel;
 import org.apache.causeway.valuetypes.vega.persistence.jdo.dn.CausewayModuleValVegaPersistenceJdoDn;
-import org.apache.causeway.viewer.wicket.viewer.CausewayModuleViewerWicketViewer;
 
 import demoapp.dom.DemoModuleCommon;
 import demoapp.web.DemoAppManifestJdo;
@@ -65,12 +64,8 @@ import demoapp.web.DemoAppManifestJdo;
     CausewayModuleValMarkdownPersistenceJdoDn.class,
     CausewayModuleValVegaPersistenceJdoDn.class,
 
-
-    // WICKET INTEGRATION ... to allow side by side comparison
-    CausewayModuleViewerWicketViewer.class, // wicket viewer
     CausewayModuleExtSseWicket.class, // server sent events
     CausewayModuleValAsciidocUiWkt.class, // ascii-doc rendering support (for Wicket)
-
 })
 public class DemoAppVaadin extends SpringBootServletInitializer {
 

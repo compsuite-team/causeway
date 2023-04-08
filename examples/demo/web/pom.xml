@@ -33,12 +33,52 @@
 
 	<dependencies>
 
-		<!-- WEB APPLICATION DEPENDENCY BUNDLE -->
+		<!-- SPRING -->
 
 		<dependency>
-			<groupId>org.apache.causeway.mavendeps</groupId>
-			<artifactId>causeway-mavendeps-webapp</artifactId>
-			<type>pom</type>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<!-- there is also webflux, that we could want to use instead-->
+		            <groupId>org.springframework</groupId>
+		            <artifactId>spring-webmvc</artifactId>
+		        </exclusion>
+		        <exclusion>
+					<!-- not needed if wicket or resteasy are used-->
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-thymeleaf</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.validation</groupId>
+					<artifactId>validation-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-jcl</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- CAUSEWAY -->
+
+		<dependency>
+			<groupId>org.apache.causeway.core</groupId>
+			<artifactId>causeway-core-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.causeway.security</groupId>
+			<artifactId>causeway-security-bypass</artifactId>
 		</dependency>
 
 		<!-- DEMO DOMAIN -->
@@ -48,8 +88,6 @@
 			<artifactId>demo-domain</artifactId>
 		</dependency>
 
-
-
 		<!-- CORS -->
 
 		<dependency>
@@ -57,29 +95,14 @@
 			<artifactId>causeway-extensions-cors-impl</artifactId>
 		</dependency>
 
-		<!-- Extensions -->
+		<!-- EXTENSIONS -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-log4j2</artifactId>
-		</dependency>
-
-
+		
+		
 	</dependencies>
 
 </project>

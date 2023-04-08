@@ -112,6 +112,10 @@
 			<artifactId>causeway-extensions-fullcalendar-wicket-ui</artifactId>
 		</dependency>
 
+		<dependency>
+		    <groupId>org.apache.causeway.extensions</groupId>
+		    <artifactId>causeway-extensions-exceldownload-wicket-ui</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>

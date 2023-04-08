@@ -43,6 +43,14 @@
 			<groupId>org.apache.causeway.examples.apps</groupId>
 			<artifactId>demo-testing-jpa</artifactId>
 			<version>${project.version}</version>
+			<exclusions>
+			    <exclusion>
+			        <groupId>org.apache.causeway.extensions</groupId>
+			        <artifactId>
+			            causeway-extensions-exceldownload-wicket-ui
+			        </artifactId>
+			    </exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>

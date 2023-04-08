@@ -29,20 +29,34 @@
 
 	<dependencies>
 
-		<!-- WEB APPLICATION DEPENDENCY BUNDLE -->
-
+		<!-- CAUSEWAY API -->
+		
 		<dependency>
-			<groupId>org.apache.causeway.mavendeps</groupId>
-			<artifactId>causeway-mavendeps-webapp</artifactId>
-			<type>pom</type>
+			<groupId>org.apache.causeway.core</groupId>
+			<artifactId>causeway-applib</artifactId>
 		</dependency>
 
-		<!-- DEMO DOMAIN -->
+		<dependency>
+			<groupId>org.apache.causeway.core</groupId>
+			<artifactId>causeway-schema</artifactId>
+		</dependency>
 
 		<dependency>
-			<groupId>org.apache.causeway.examples.apps</groupId>
-			<artifactId>demo-domain</artifactId>
+			<groupId>org.apache.causeway.core</groupId>
+			<artifactId>causeway-core-security</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.causeway.security</groupId>
+			<artifactId>causeway-security-bypass</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.causeway.core</groupId>
+			<artifactId>causeway-core-runtimeservices</artifactId>
+		</dependency>
+
+
+		<!-- DEMO DOMAIN + WEB -->
 		
 		<dependency>
 		    <groupId>org.apache.causeway.examples.apps</groupId>
