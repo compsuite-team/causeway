@@ -1210,7 +1210,7 @@ ${license.additional-notes}
             <dependency>
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>
-                <version>${reflections.version}</version>
+                <version>0.9.11</version>
             </dependency>
 
             <!-- schema -->
